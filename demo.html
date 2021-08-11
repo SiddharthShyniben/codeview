@@ -4,12 +4,12 @@
 		<meta charset='UTF-8'>
 		<title>Codeview Demo</title>
 		<link rel='stylesheet' href='css/codeview.css'>
-		<script src='js/codeview.js'></script>
+		<script src='codeview.js'></script>
 	</head>
 	<body>
 		<div id='codeview' class='codeview'></div>
 		<script>
-			const view = new CodeView('#codeview', 'const foo = "bar //";\n// comment');
+			const view = new CodeView('#codeview', 'const foo = "bar";\n// comment\n/* comment */\nfoo = true + 0x123 + 123;\ncallME()');
 		</script>
 	</body>
 </html>
