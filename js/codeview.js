@@ -5,11 +5,7 @@ class CodeView {
 		this.render();
 	}
 
-	_highlight(code) {
-		return Prism.highlight(code)
-	}
-
 	render() {
-		this.element.innerHTML = `<pre><code>${this._highlight(this.code)}</code></pre>`
+		this.element.innerHTML = `<pre><code>${this.code}</code></pre>`
 	}
 }
