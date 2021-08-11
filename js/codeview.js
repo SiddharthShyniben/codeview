@@ -9,6 +9,8 @@ export default class CodeView {
 	}
 
 	render() {
-		this.element.innerHTML = `<pre><code>${highlight(this.code)}</code></pre>`
+		this.element.innerHTML = `<pre><code>${
+			highlight(this.code).map(line => `<div>${line}</div>`).join('')
+		}</code></pre>`
 	}
 }
