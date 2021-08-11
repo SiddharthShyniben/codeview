@@ -1,15 +1,14 @@
 import {highlight} from './highlight.js';
 
 export default class CodeView {
-	constructor(element, initialCode) {
-		this.element = document.querySelector(element);
-		this.code = initialCode;
+	constructor(options = {}) {
+		this.element = document.querySelector(options.element);
+		this.code = options.initial;
 		this.render();
-		// TODO option
-		this.language = 'javascript';
+		// Todo make language settable
 	}
 
 	render() {
-		this.element.innerHTML = `<pre><code>${highlight(this.code, this.language)}</code></pre>`
+		this.element.innerHTML = `<pre><code>${highlight(this.code)}</code></pre>`
 	}
 }

@@ -9,7 +9,7 @@
 	<body>
 		<div id='codeview' class='codeview'></div>
 		<script>
-			const view = new CodeView('#codeview', 'const foo = "bar";\n// comment\n/* comment */\nfoo = true + 0x123 + 123;\ncallME()');
+			const view = new CodeView({element: '#codeview', initial: 'const foo = "bar";\n// comment\n/* comment */\nfoo = true + 0x123 + 123;\ncallME()'});
 		</script>
 	</body>
 </html>
