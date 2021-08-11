@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+} 
+
+.codeview {
+	background-color: #2B2B2B;
+	width: 100vw;
+	height: 100vh;,
+	color: #F1F8F2;
+	padding: 1rem;
+	overflow: scroll;
+}
+
+.codeview, .codeview * {
+	font-family: "Fira Code", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	color: white;
+	tab-size: 4;
+}
