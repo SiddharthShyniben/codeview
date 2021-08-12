@@ -1,4 +1,5 @@
 import {highlight} from './highlight.js';
+import {findTokensPerLine} from './focus.js'
 
 export default class CodeView {
 	constructor(options = {}) {
@@ -12,9 +13,14 @@ export default class CodeView {
 		this.element.innerHTML = `<pre><code>${this._highlight(this.code, options)}</code></pre>`
 	}
 
+	focus(step) {
+		this.render({step});
+	}
+
 	_highlight(code, options) {
+		const tokensPerLine = findTokensPerLine(options.step || {});
 		return highlight(code).map((line, index) => `<div style='opacity: ${
-			(options.range || []).includes(index + 1) ? 1 : 0.3
+			index + 1 in tokensPerLine ? 1 : 0.3
 		}'>${line}</div>`).join('')
 	}
 }
